@@ -8,7 +8,7 @@ export const mockProducts: Product[] = [
     name_lo: 'ຫູຟັງບລູທູດ TWS',
     description: '蓝牙5.3，续航6小时，支持快充，IPX5防水',
     description_lo: 'Bluetooth 5.3, ໃຊ້ໄດ້ 6 ຊົ່ວໂມງ',
-    images: ['https://img.alicdn.com/imgextra/i1/2215106692482/O1CN01L0HwSp1K1234567890_!!2215106692482.jpg'],
+    images: [], // 暂时使用占位图，后续上传真实图片到 Supabase Storage
     original_price: 180000, // 180,000 LAK ≈ ¥72
     tiers: [
       { min_people: 1, price: 180000 },
@@ -26,7 +26,7 @@ export const mockProducts: Product[] = [
     name_lo: 'ແບັດສຳຮອງ 20000mAh',
     description: '支持PD20W快充，双向快充，LED电量显示',
     description_lo: 'ສາກໄວ PD20W, ສະແດງແບັດ LED',
-    images: ['https://img.alicdn.com/imgextra/i2/2215106692482/O1CN01L0HwSp1K1234567891_!!2215106692482.jpg'],
+    images: [],
     original_price: 280000,
     tiers: [
       { min_people: 1, price: 280000 },
@@ -44,7 +44,7 @@ export const mockProducts: Product[] = [
     name_lo: 'ແວ່ນແຕ່ງໜ້າ LED',
     description: '72颗LED灯，三档亮度，180°旋转，USB充电',
     description_lo: '72 LED, 3 ລະດັບແສງ, ໝຸນໄດ້ 180°',
-    images: ['https://img.alicdn.com/imgextra/i3/2215106692482/O1CN01L0HwSp1K1234567892_!!2215106692482.jpg'],
+    images: [],
     original_price: 120000,
     tiers: [
       { min_people: 1, price: 120000 },
@@ -62,7 +62,7 @@ export const mockProducts: Product[] = [
     name_lo: 'ພັດລົມຄໍ mini',
     description: '三档风速，2000mAh电池，静音设计，可折叠',
     description_lo: '3 ລະດັບລົມ, ແບັດ 2000mAh, ງຽບ',
-    images: ['https://img.alicdn.com/imgextra/i4/2215106692482/O1CN01L0HwSp1K1234567893_!!2215106692482.jpg'],
+    images: [],
     original_price: 100000,
     tiers: [
       { min_people: 1, price: 100000 },
@@ -80,7 +80,7 @@ export const mockProducts: Product[] = [
     name_lo: 'ສາຍສາກ Type-C 1.5ແມັດ',
     description: '66W快充，尼龙编织，耐弯折10000次',
     description_lo: 'ສາກໄວ 66W, ສາຍຖັກ, ທົນທານ',
-    images: ['https://img.alicdn.com/imgextra/i5/2215106692482/O1CN01L0HwSp1K1234567894_!!2215106692482.jpg'],
+    images: [],
     original_price: 50000,
     tiers: [
       { min_people: 1, price: 50000 },
