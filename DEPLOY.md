@@ -7,7 +7,7 @@
 ```bash
 # 1. 在 GitHub 上创建新仓库
 # 访问 https://github.com/new
-# 仓库名: laos-group-buy
+# 仓库名: laos-group-buy (或 together-buy)
 # 可见性: Private (推荐) 或 Public
 
 # 2. 推送代码到 GitHub

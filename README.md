@@ -1,6 +1,8 @@
-# 🇱🇦 Laos Group Buy Platform (拼团购物平台)
+# 🤝 ຮ່ວມກັນ · Together (一起买)
 
-老挝拼团电商平台 - 支持中文/老挝语双语
+老挝拼团购物平台 - 支持中文/老挝语双语
+
+Laos Group Buy Platform
 
 ## 功能特性
 

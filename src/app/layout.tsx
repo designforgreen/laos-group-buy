@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ຮ້ານຄ້າລາວ - Laos Group Buy",
-  description: "ຊື້ເປັນກຸ່ມ ລາຄາຖືກກວ່າ | 拼团购物，价格更优惠",
+  title: "ຮ່ວມກັນ - Together | 拼团购物平台",
+  description: "ຮ່ວມກັນຊື້ ລາຄາຖືກກວ່າ | 一起买，价格更优惠 | Laos Group Buy Platform",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
@@ -19,8 +19,11 @@ export default function RootLayout({
         <header className="bg-white shadow-sm sticky top-0 z-50">
           <div className="max-w-lg mx-auto px-4 py-3 flex items-center justify-between">
             <a href="/" className="flex items-center gap-2">
-              <span className="text-2xl">🛒</span>
-              <span className="font-bold text-lg text-gray-800">ຮ້ານຄ້າລາວ</span>
+              <span className="text-2xl">🤝</span>
+              <div>
+                <div className="font-bold text-lg text-gray-800">ຮ່ວມກັນ</div>
+                <div className="text-xs text-gray-500 -mt-1">一起买 · Together</div>
+              </div>
             </a>
             <a href="/orders" className="text-gray-600 hover:text-primary-500">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,7 +40,7 @@ export default function RootLayout({
 
         {/* 底部 */}
         <footer className="max-w-lg mx-auto px-4 py-6 text-center text-gray-400 text-sm">
-          <p>Laos Group Buy</p>
+          <p>ຮ່ວມກັນ · Together | 一起买</p>
           <p className="mt-1">WhatsApp: +856 20 9606 0666</p>
         </footer>
       </body>
