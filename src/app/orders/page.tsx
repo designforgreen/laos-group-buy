@@ -159,7 +159,7 @@ export default function OrdersPage() {
           如有问题请联系客服
         </p>
         <a
-          href="https://wa.me/85620xxxxxxxx"
+          href="https://wa.me/8562096060666"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-secondary w-full text-sm flex items-center justify-center gap-2"

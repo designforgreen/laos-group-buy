@@ -37,8 +37,8 @@ export default function RootLayout({
 
         {/* 底部 */}
         <footer className="max-w-lg mx-auto px-4 py-6 text-center text-gray-400 text-sm">
-          <p>© 2024 Laos Group Buy</p>
-          <p className="mt-1">WhatsApp: +856 20 xxxx xxxx</p>
+          <p>Laos Group Buy</p>
+          <p className="mt-1">WhatsApp: +856 20 9606 0666</p>
         </footer>
       </body>
     </html>
