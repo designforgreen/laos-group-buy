@@ -9,7 +9,7 @@ import { supabase } from './supabase';
  */
 export async function uploadImage(
   file: File,
-  bucket: string = 'payment-proofs',
+  bucket: string = 'group-buy',
   folder?: string
 ): Promise<string> {
   // 验证文件类型
@@ -61,7 +61,7 @@ export async function uploadImage(
  */
 export async function deleteImage(
   url: string,
-  bucket: string = 'payment-proofs'
+  bucket: string = 'group-buy'
 ): Promise<void> {
   try {
     // 从URL中提取文件路径

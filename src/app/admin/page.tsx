@@ -705,7 +705,7 @@ function ProductFormModal({
 
       for (let i = 0; i < files.length; i++) {
         const file = files[i];
-        const url = await uploadImage(file, 'payment-proofs', 'products');
+        const url = await uploadImage(file, 'group-buy', 'products');
         uploadedUrls.push(url);
       }
 
@@ -728,7 +728,7 @@ function ProductFormModal({
     setImages(newImages);
 
     // 从Storage中删除（不阻塞UI）
-    deleteImage(imageUrl, 'payment-proofs');
+    deleteImage(imageUrl, 'group-buy');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
