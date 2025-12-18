@@ -30,6 +30,7 @@ export interface GroupBuy {
   current_tier: number; // 当前达到的价格档位
   status: 'pending' | 'success' | 'failed' | 'expired';
   expires_at: string;
+  is_official?: boolean; // 是否官方团
   created_at: string;
 }
 
