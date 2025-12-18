@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "ຮ່ວມກັນ - Together | 拼团购物平台",
   description: "ຮ່ວມກັນຊື້ ລາຄາຖືກກວ່າ | 一起买，价格更优惠 | Laos Group Buy Platform",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
