@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 
+export const runtime = 'edge';
+
 export default function PaymentSuccessPage() {
   const params = useParams();
   const orderId = params.orderId as string;
