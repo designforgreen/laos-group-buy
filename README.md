@@ -153,6 +153,7 @@ A: 替换 `/public/images/qr-code.png`，然后在 Supabase 更新 `gb_payment_c
 ### Q: 如何修改定金比例？
 A: 修改 `.env.local` 中的 `NEXT_PUBLIC_DEPOSIT_PERCENTAGE`。
 
+
 ### Q: 如何添加新管理员？
 A: 在 Supabase SQL Editor 中运行：
 ```sql
