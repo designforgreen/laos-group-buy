@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+export const runtime = 'edge';
+
 // BCEL OnePay API 配置
 const BCEL_CONFIG = {
   merchantId: process.env.BCEL_MERCHANT_ID || '',

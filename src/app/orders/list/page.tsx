@@ -1,6 +1,8 @@
 import { supabase } from '@/lib/supabase';
 import OrderListClient from './OrderListClient';
 
+export const runtime = 'edge';
+
 export default async function OrderListPage({
   searchParams,
 }: {

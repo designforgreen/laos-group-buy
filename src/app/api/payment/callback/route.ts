@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+export const runtime = 'edge';
+
 // BCEL OnePay 支付回调处理
 export async function POST(request: NextRequest) {
   try {

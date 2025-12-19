@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import { supabase } from '@/lib/supabase';
 import PaymentPageClient from './PaymentPageClient';
 
+export const runtime = 'edge';
+
 export default async function PaymentPage({
   params,
 }: {

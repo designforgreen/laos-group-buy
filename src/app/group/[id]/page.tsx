@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import { getGroupBuy, getProduct, getOrCreateGroupBuy, getProductGroupBuys } from '@/lib/db';
 import GroupPageClient from './GroupPageClient';
 
+export const runtime = 'edge';
+
 export default async function GroupPage({
   params,
   searchParams,
