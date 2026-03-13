@@ -114,7 +114,26 @@ export default function GroupPageClient({
   return (
     <div className="pb-24">
       {/* 商品图片轮播 */}
-      <div className="relative aspect-square bg-gray-100">
+      <div
+        className="relative aspect-square bg-gray-100"
+        onTouchStart={(e) => {
+          const touch = e.touches[0];
+          (e.currentTarget as any)._touchStartX = touch.clientX;
+        }}
+        onTouchEnd={(e) => {
+          const startX = (e.currentTarget as any)._touchStartX;
+          if (startX === undefined) return;
+          const endX = e.changedTouches[0].clientX;
+          const diff = startX - endX;
+          if (Math.abs(diff) > 50) {
+            if (diff > 0 && currentImageIndex < product.images.length - 1) {
+              setCurrentImageIndex(currentImageIndex + 1);
+            } else if (diff < 0 && currentImageIndex > 0) {
+              setCurrentImageIndex(currentImageIndex - 1);
+            }
+          }
+        }}
+      >
         {product.images[currentImageIndex] ? (
           <img
             src={product.images[currentImageIndex]}
@@ -132,18 +151,45 @@ export default function GroupPageClient({
           </div>
         )}
 
-        {/* 图片指示器 */}
+        {/* 左右箭头 */}
         {product.images.length > 1 && (
-          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-            {product.images.map((_, index) => (
+          <>
+            {currentImageIndex > 0 && (
               <button
-                key={index}
-                onClick={() => setCurrentImageIndex(index)}
-                className={`w-2 h-2 rounded-full ${
-                  index === currentImageIndex ? 'bg-white' : 'bg-white/50'
-                }`}
-              />
-            ))}
+                onClick={() => setCurrentImageIndex(currentImageIndex - 1)}
+                className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 rounded-full flex items-center justify-center text-white"
+              >
+                ‹
+              </button>
+            )}
+            {currentImageIndex < product.images.length - 1 && (
+              <button
+                onClick={() => setCurrentImageIndex(currentImageIndex + 1)}
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 rounded-full flex items-center justify-center text-white"
+              >
+                ›
+              </button>
+            )}
+          </>
+        )}
+
+        {/* 图片指示器 + 计数 */}
+        {product.images.length > 1 && (
+          <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center gap-2">
+            <span className="bg-black/40 text-white text-xs px-2 py-0.5 rounded-full">
+              {currentImageIndex + 1} / {product.images.length}
+            </span>
+            <div className="flex gap-2">
+              {product.images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`w-2.5 h-2.5 rounded-full ${
+                    index === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         )}
       </div>
