@@ -1,7 +1,7 @@
 import ProductCard from '@/components/ProductCard';
 import { getProducts, getRecommendedGroupBuy } from '@/lib/db';
 
-export const revalidate = 60; // 每60秒重新验证
+export const dynamic = 'force-dynamic'; // 每次访问都获取最新数据
 
 export default async function Home() {
   // 从数据库获取数据

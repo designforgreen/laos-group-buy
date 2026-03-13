@@ -1036,7 +1036,7 @@ function GroupBuyFormModal({
     try {
       const expiresAt = new Date(Date.now() + formData.expires_hours * 60 * 60 * 1000).toISOString();
 
-      await supabase
+      const { error } = await supabase
         .from('gb_group_buys')
         .insert([{
           product_id: product.id,
@@ -1048,6 +1048,13 @@ function GroupBuyFormModal({
           is_official: formData.is_official,
         }]);
 
+      if (error) {
+        console.error('Error creating group buy:', error);
+        alert('创建拼团失败: ' + error.message);
+        return;
+      }
+
+      alert('拼团创建成功！');
       onSave();
     } catch (error) {
       console.error('Error creating group buy:', error);
