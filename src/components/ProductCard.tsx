@@ -71,9 +71,12 @@ export default function ProductCard({ product, groupBuy }: ProductCardProps) {
 
         {/* 商品信息 */}
         <div className="p-3">
-          <h3 className="font-medium text-gray-800 line-clamp-2 mb-2">
-            {product.name}
+          <h3 className="font-medium text-gray-800 line-clamp-2 mb-1">
+            {product.name_lo || product.name}
           </h3>
+          {product.name_lo && (
+            <p className="text-xs text-gray-500 line-clamp-1 mb-2">{product.name}</p>
+          )}
 
           <div className="flex items-baseline gap-2">
             <span className="text-primary-500 font-bold text-xl">
