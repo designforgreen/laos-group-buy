@@ -1,6 +1,7 @@
 import ProductCard from '@/components/ProductCard';
 import { getProducts, getRecommendedGroupBuy } from '@/lib/db';
 
+export const runtime = 'edge';
 export const dynamic = 'force-dynamic'; // 每次访问都获取最新数据
 
 export default async function Home() {
